@@ -4,7 +4,8 @@
 
 
 ## Usage/Examples
-run app.py 
+app.py'daki api key kisimlarini doldurunuz
+app.py'ı caliştiriniz
 
 
 

@@ -7,8 +7,8 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from pylatex import Document, NoEscape
 import subprocess
 
-GOOGLE_API_KEY = "AIzaSyCTx7ovsUHnPT82z-CpcayBDRmiVRkZuN0"
-GOOGLE_API_KEY2 = "AIzaSyB_n9TBFqx-AKPl8LkgvaYmLf0rYuATzCA"
+GOOGLE_API_KEY = "YOUR_APİ_KEY1"
+GOOGLE_API_KEY2 = "YOUR_APİ_KEY2"
 
 
 #2 farklı llm kullandık bunun sebebi hem soruyu oluşturan llm e düzelttirmek istemedik hem de bir llm'e art arda girdi verince sorun çıkartması.

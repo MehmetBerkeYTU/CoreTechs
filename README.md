@@ -11,17 +11,17 @@ run app.py
 
 
 ## Gereksinimler
-Flask==2.1.0
+Flask
 
-pdfkit==1.0.0
+pdfkit
 
-io==1.0.0
+io
 
-langchain-google-genai==0.1.0
+langchain-google-genai
 
-langchain-core==0.1.0
+langchain-core
 
-pylatex==1.4.1
+pylatex
 
 MiKTeX
 

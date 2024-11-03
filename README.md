@@ -25,6 +25,3 @@ pylatex==1.4.1
 
 MiKTeX
 
-## Authors
-@berkesule
-@Celebimehmet34

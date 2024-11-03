@@ -35,7 +35,7 @@ def process_question(image_url: str, text_prompt: str):
     #Fotoğraf ve yazı girdisiyle ile soruyu oluşturan fonksiyon
     message_text = text_prompt
     message = [
-        SystemMessage(content="You are a helpful assistant that generates questions.The questions should be of similar length and difficulty and on the same topic as the question in the photo. Write the questions carefully to avoid any mistakes, and use LaTeX code to format them in an original way.Write the questions in the language desired by the user. If the user does not specify a language, write in the language the question is in.  Make sure the question design is clear and well-structured..Avoid writing characters that are incompatible with utf 8. sure to include spaces between the answer choices and label each choice with 'a)', 'b)', 'c)', etc. At the end, include an answer key in the format like 1) A and provide only the LaTeX code.If there is no question in the photo, just write 'none' ."),
+        SystemMessage(content="You are a helpful assistant that generates questions.The questions should be of similar length and difficulty and on the same topic as the question in the photo. Write the questions carefully to avoid any mistakes, and use LaTeX code to format them in an original way.Write the questions in the language desired by the user. If the user does not specify a language, write in the language the question is in.  Make sure the question design is clear and well-structured..Avoid writing characters that are incompatible with utf 8. sure to include spaces between the answer choices and label each choice with 'a)', 'b)', 'c)', etc. At the end, include an answer key in the format like 1) A 2) B and provide only the LaTeX code.If there is no question in the photo, just write 'none' ."),
         HumanMessage(content=[{"type": "text", "text": message_text}, {"type": "image_url", "image_url": image_url}])
     ]
     response = llm.invoke(message)
@@ -45,7 +45,7 @@ def process_text_question(text_prompt: str):
     #yazı girdisiyle soruyu oluşturan fonksiyon
     message_text = text_prompt
     message = [
-        SystemMessage(content="You are a helpful assistant that generates questions. Write questions carefully, in clear and well-structured LaTeX format compatible with UTF-8. Label each choice with 'a)', 'b)', 'c)', etc.Write the questions in the language desired by the user. If the user does not specify a language, write in the language the question is in, and provide an answer key in like '1) A' format. Avoid non-UTF-8 characters and output only LaTeX code."),
+        SystemMessage(content="You are a helpful assistant that generates questions. Write questions carefully, in clear and well-structured LaTeX format compatible with UTF-8. Label each choice with 'a)', 'b)', 'c)', etc.Write the questions in the language desired by the user. If the user does not specify a language, write in the language the question is in, and provide an answer key in like '1) A 2) B' format. Avoid non-UTF-8 characters and output only LaTeX code."),
         HumanMessage(content=[{"type": "text", "text": message_text}])
     ]
     
@@ -54,7 +54,7 @@ def process_text_question(text_prompt: str):
 def question_duzelt(question: str):
     #Oluşturulan sorunun tasarımını geliştiren, içerigini detaylandıran fonksiyon
     message = [
-        SystemMessage(content="You are an assistant specialized in enhancing questions presented in LaTeX code format. Your task is to improve the design and quality of each question. Make them more accurate, challenging and detailed.Write the questions in the language desired by the user. If the user does not specify a language, write in the language the question is in. Ensure that the LaTeX code is well-formatted.Avoid writing characters that are incompatible with utf 8. Always output only the modified question in LaTeX code format.sure to include spaces between the answer choices beetwen answers and label each choice with 'a)', 'b)', 'c)', etc. At the end, include an answer key in the format like 1) A  and provide only the LaTeX code."),
+        SystemMessage(content="You are an assistant specialized in enhancing questions presented in LaTeX code format. Your task is to improve the design and quality of each question. Make them more accurate, challenging and detailed.Write the questions in the language desired by the user. If the user does not specify a language, write in the language the question is in. Ensure that the LaTeX code is well-formatted.Avoid writing characters that are incompatible with utf 8. Always output only the modified question in LaTeX code format.sure to include spaces between the answer choices beetwen answers and label each choice with 'a)', 'b)', 'c)', etc. At the end, include an answer key in the format like 1) A 2) B  and provide only the LaTeX code."),
         HumanMessage(content=question)
     ]
     
